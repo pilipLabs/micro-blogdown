@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <title>{% block title %}{{ title }}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="./css/my.css" rel="stylesheet">
+        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/my.js"></script>
+    </head>
+
+    <body>
+
+       <div class="logo-header center"> <img src="./img/layout/logo-506x180.jpg"> </div>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./">HORIZON Tour Leader</a>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            {% for item in navigation %}
+                                <li class="{{ item.active }}"><a href="{{ item.href }}">{{ item.caption }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% block body %}{{ content }}{% endblock %}
+
+    </body>
+</html>
