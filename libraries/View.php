@@ -14,11 +14,11 @@ class View {
     public function __construct($view){
 
         $this->loader = new Twig_Loader_Filesystem(APP_VIEWS_PATH);
+        // Attention le dossier cache doit etre en premission drwxrwxrwx
         $this->twig   = new Twig_Environment($this->loader, array(
             'cache' => APP_PATH . '/cache',
         ));
-
-        $this->template = $this->twig->loadTemplate($view);
+        $this->template = $this->twig->loadTemplate($view.".twig");
 
     }
 
