@@ -4,15 +4,6 @@
 .hide { display:none; }
 [class^="icon-"], [class*=" icon-"] { background-image: url("../img/layout/glyphicons-halflings.png");}
 .icon-white { background-image: url("../img/layout/glyphicons-halflings-white.png");}
-.navbar-inner {
-    background-color: #ffffff;
-    background-image: -moz-linear-gradient(top, #2180b0, #1e6bbe);
-    background-image: -ms-linear-gradient(top, #2180b0, #1e6bbe);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2180b0), to(#1e6bbe));
-    background-image: -webkit-linear-gradient(top, #2180b0, #1e6bbe);
-    background-image: -o-linear-gradient(top, #2180b0, #1e6bbe);
-    background-image: linear-gradient(top, #2180b0, #1e6bbe);
-}
 .left { float:left; margin-right:2px;}
 .post {margin-bottom:5px;border-bottom: 1px solid #e5e5e5;}
 .navbar .nav .active > a, .navbar .nav .active > a:hover { color: white; text-decoration: none; background-color: #0c3b67;}
@@ -23,36 +14,3 @@
 .footer p { margin-bottom: 0; color: #555; }
 
 .post {text-align:justify}
-
-
-
-.btn-navbar {
-background-color: #2180b0;
-background-image: -moz-linear-gradient(top, #2180b0, #1e6bbe);
-background-image: -ms-linear-gradient(top, #2180b0, #1e6bbe);
-background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2180b0), to(#1e6bbe));
-background-image: -webkit-linear-gradient(top, #2180b0, #1e6bbe);
-background-image: -o-linear-gradient(top, #2180b0, #1e6bbe);
-background-image: linear-gradient(top, #2180b0, #1e6bbe);
-background-repeat: repeat-x;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2180b0', endColorstr='#1e6bbe', GradientType=0);
-border-color: #222 #222 black;
-border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
--webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),0 1px 0 rgba(255, 255, 255, 0.075);
--moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),0 1px 0 rgba(255, 255, 255, 0.075);
-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.1),0 1px 0 rgba(255, 255, 255, 0.075);
-}
-.btn-navbar:hover,
-.btn-navbar:active,
-.btn-navbar.active,
-.btn-navbar.disabled,
-.btn-navbar[disabled] {
-  background-color: #1e6bbe;
-}
-.btn-navbar:active, .btn-navbar.active {
-  background-color: #080808 \9;
-}
-
-.navbar .nav > li > a:hover { background-color: #5ea2c9; }
-.navbar .nav-collapse > li > a:hover { background-color: #0c3b67; }
