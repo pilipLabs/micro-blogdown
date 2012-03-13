@@ -4,3 +4,6 @@
 [submodule "libraries/Twig"]
 	path = libraries/Twig
 	url = https://github.com/fabpot/Twig.git
+[submodule "libraries/lessphp"]
+	path = libraries/lessphp
+	url = https://github.com/leafo/lessphp.git
