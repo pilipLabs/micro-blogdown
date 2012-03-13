@@ -1,7 +1,7 @@
 Micro-Blogdown
 ===================
 
-Micro-Blogdown is a blog based on [Micro](https://github.com/aegypius/micro) using 
+Micro-Blogdown is a blog based on [Micro](https://github.com/aegypius/micro) using
 Markdown files to store blog posts.
 
 No database required !
@@ -57,7 +57,7 @@ here a simple example :
     span: 4
     title: title of page
     -----
-    
+
     Markdown content for header of section
 
 
