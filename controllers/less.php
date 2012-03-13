@@ -1,20 +1,18 @@
 <?php
+require_once FRAMEWORK_PATH.'/lessphp/lessc.inc.php';
 
 class less extends Controller{
     function index() {
-        self::render('less', array('content' => 'youpi'));
-    }
-
-    static function error($error = false) {
-        $args = array();
-        if ($error) {
-            header('HTTP/1.1 '. ($error->getCode() == '404' ? '404 Not Found' : '500 Application Error'));
-            $args = array(
-                'error' => array(
-                    'code'    => 'File Not Found',
-                    'message' => $error->getMessage()
-                    )
-                );
+        header('Content-Type:text/css; charset:utf-8;');
+        $input = FRAMEWORK_PATH.'/bootstrap/less/bootstrap.less';
+        $lc = new lessc($input);
+        try {
+            $out  = $lc->parse();
+            $out .= $lc->parse('@import "reset.less";');
+            self::render('less', array('css' => $lc->parse()));
+        } catch (Exception $ex) {
+           self::error($ex);
         }
     }
+
 }
