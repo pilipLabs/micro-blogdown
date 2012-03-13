@@ -6,4 +6,12 @@ abstract class Controller {
         $v = new View($view);
         echo $v->render($params);
     }
+
+
+    static function error($error = false) {
+        if ($error) {
+            Micro::error($error);
+        }
+    }
+
 }

@@ -1,1 +1,10 @@
 
+RewriteEngine On
+RewriteBase   /
+
+RewriteCond %{REQUEST_URI} !/(css|img|js)/
+RewriteCond %{REQUEST_URI} !/(favicon\.*|sitemap.xml|robots.txt)
+RewriteCond %{REQUEST_URI} !/index.php
+
+
+RewriteRule ^(.*)$ /index.php [QSA,L]
