@@ -4,6 +4,3 @@
 [submodule "libraries/lessphp"]
 	path = libraries/lessphp
 	url = https://github.com/leafo/lessphp.git
-[submodule "libraries/bootstrap"]
-	path = libraries/bootstrap
-	url = https://github.com/twitter/bootstrap.git
