@@ -1,3 +1,7 @@
 cache/*
 contents/*
 Thumbs.db
+.buildpath
+.project
+.settings/
+
