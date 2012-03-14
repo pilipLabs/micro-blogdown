@@ -9,7 +9,7 @@ class less extends Controller{
         $out = "";
         try {
             $out .= $lc->parse();
-            self::render('less', array('css' => $out));
+            echo $out;
         } catch (Exception $ex) {
            self::error($ex);
         }
