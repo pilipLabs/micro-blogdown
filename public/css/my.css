@@ -6,8 +6,6 @@
 .icon-white { background-image: url("../img/layout/glyphicons-halflings-white.png");}
 .left { float:left; margin-right:2px;}
 .post {margin-bottom:5px;border-bottom: 1px solid #e5e5e5;}
-.navbar .nav .active > a, .navbar .nav .active > a:hover { color: white; text-decoration: none; background-color: #0c3b67;}
-.navbar .nav>li>a{float:none;padding:10px 10px 11px;line-height:19px;color:#222;text-decoration:none;}
 .navbar-inner { padding-left: 0; padding-right: 0; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
 #content { position: relative; padding-top: 30px;}
 .footer { margin-top: 45px; margin-right: auto; margin-left: auto; padding: 35px 0 36px; border-top: 1px solid #e5e5e5; }

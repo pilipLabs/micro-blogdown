@@ -1,0 +1,15 @@
+{% extends "layout.twig" %}
+
+{% block body %}
+	<ul class="thumbnails">
+        {% for item in photo %}
+		<li class="span3">
+			<a class="thumbnail"  href="{{ item.href }}" rel="lightbox[{{ item.categ }}]" title="{{ item.caption }}">
+            <img src="{{ item.href_mini }}" alt="{{ item.caption }}"/>
+			</a>
+	    </li>
+        {% endfor %}
+	</ul>
+
+
+{% endblock %}

@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/less" rel="stylesheet">
         <link href="/css/my.css" rel="stylesheet">
-        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/my.js"></script>
+        <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/my.js"></script>
     </head>
 
     <body>
@@ -22,12 +22,27 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="./">_pilip Labs</a>
+                    <a class="brand" href="./">{% block site_title %}{{ site_title }}{% endblock %}</a>
                     <div class="nav-collapse">
                         <ul class="nav">
-                                <li class=""><a href="#">HOME</a></li>
                             {% for item in navigation %}
-                                <li class="{{ item.active }}"><a href="{{ item.href }}">{{ item.caption }}</a></li>
+                                    {% if item.dropdown  %}
+                                    <li class="dropdown {{ item.active }}">  
+                                    <a  class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="{{ item.href }}" class="dropdown-toggle" data-toggle="dropdown">
+                                        {{ item.caption }}
+                                        <b class="caret"></b>
+                                    </a>
+                                        <ul  class="dropdown-menu">
+                                        {% for i in item.dropdown %}
+                                            <li class="{{ i.active }}"><a href="{{ i.href }}">{{ i.caption }}</a></li>
+                                        {% endfor %}
+                                        </ul>
+                                    </li>       
+                                    {% else %}
+                                    <li class="{{ item.active }}">  
+                                        <a href="{{ item.href }}">{{ item.caption }}</a>
+                                    </li>       
+                                    {% endif %}
                             {% endfor %}
                         </ul>
                     </div>

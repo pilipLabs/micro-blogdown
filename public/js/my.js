@@ -1,4 +1,7 @@
 (function($) {
+    $(document).ready(function() {
+        $('.dropdown-toggle').dropdown();
+    });
     $(window).load(function(){
         var $win = $(window)
           , $nav = $('.navbar')
